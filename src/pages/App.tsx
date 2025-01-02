@@ -1,23 +1,22 @@
 import React from 'react';
-import './App.scss';
 import Header from "../components/Header";
-import HomePage from "../components/HomePage";
-import BlogPage from '../components/BlogPage';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <div id='wrapper' className='wrapper'>
-        <Header />
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/' element={<BlogPage />} />
-          </Routes>
+          <head>
+            {/* HP情報を書く */}
+          </head>
+          <body>
+            <Header />
+            <Main />
+            <Footer />
+          </body>
         </div>
       </div>
-    </Router>
   );
 }
 

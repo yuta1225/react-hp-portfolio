@@ -6,6 +6,7 @@
 /.pnp
 .pnp.js
 /.composer
+/.next
 
 # testing
 /coverage
