@@ -1,4 +1,7 @@
-import '../src/styles/index.scss'; // グローバルCSSのインポート
+ // グローバルCSSのインポート
+import '../styles/index.scss';
+import '../styles/App.scss';
+
 import { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {

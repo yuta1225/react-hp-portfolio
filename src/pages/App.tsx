@@ -7,14 +7,9 @@ function App() {
   return (
       <div className="App">
         <div id='wrapper' className='wrapper'>
-          <head>
-            {/* HP情報を書く */}
-          </head>
-          <body>
-            <Header />
-            <Main />
-            <Footer />
-          </body>
+          <Header />
+          <Main />
+          <Footer />
         </div>
       </div>
   );
