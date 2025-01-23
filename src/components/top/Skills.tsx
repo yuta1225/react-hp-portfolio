@@ -284,16 +284,16 @@ const Skills = () => {
                 </div>
             </div>
 
-            {/*  */}
+            {/* その他 */}
             <div className="inner">
                 <div className="section-title-area">
-                    <h3 className="section-title section-skill">FrameWork</h3>
+                    <h3 className="section-title section-skill">Others</h3>
                 </div>
             </div>
             <div className="inner">
                 <div className="section-body card-wrapper">
 
-                    {/* NextJS */}
+                    {/* AWS */}
                     <div className="card">
                         <div className="skill-icon">
                             <Image
@@ -304,17 +304,17 @@ const Skills = () => {
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">NextJS</h3>
+                            <h3 className="skill-desc-title">AWS</h3>
                             <div className="rating">
                             <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはNextJSの説明文です
+                            これはAWSの説明文です
                             </div>
                         </div>
                     </div>
 
-                    {/* AngularJS */}
+                    {/* MySQL */}
                     <div className="card">
                         <div className="skill-icon">
                             <Image
@@ -325,17 +325,17 @@ const Skills = () => {
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">AngularJS</h3>
+                            <h3 className="skill-desc-title">MySQL</h3>
                             <div className="rating">
                             <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはAngularJSの説明文です
+                            これはMySQLの説明文です
                             </div>
                         </div> 
                     </div>
 
-                    {/* Zend */}
+                    {/* Docker */}
                     <div className="card">
                         <div className="skill-icon">
                             <Image
@@ -346,12 +346,33 @@ const Skills = () => {
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">Zend Framework</h3>
+                            <h3 className="skill-desc-title">Docker</h3>
                             <div className="rating">
                             <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはZend Frameworkの説明文です
+                            これはDockerの説明文です
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Git */}
+                    <div className="card">
+                        <div className="skill-icon">
+                            <Image
+                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                alt="Example Image" // 画像の代替テキスト
+                                width={100} // 必須: 画像の幅
+                                height={100} // 必須: 画像の高さ
+                            />
+                        </div>
+                        <div className="skill-desc">
+                            <h3 className="skill-desc-title">Git</h3>
+                            <div className="rating">
+                            <div className="rate rate4"></div>
+                            </div>
+                            <div className="section-text">
+                            これはGitの説明文です
                             </div>
                         </div>
                     </div>
