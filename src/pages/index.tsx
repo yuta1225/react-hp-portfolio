@@ -1,11 +1,12 @@
 import React from 'react';
-import App from './App';
-import "bootstrap/dist/css/bootstrap.min.css";
+import Main from "../components/Main";
 
 const Home = () => {
   return (
-    <div>
-      <App />
+    <div className="App">
+      <div id='wrapper' className='wrapper'>
+        <Main />
+      </div>
     </div>
   );
 };
