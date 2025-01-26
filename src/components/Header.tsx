@@ -14,13 +14,13 @@ const Header = () => {
         <nav>
             <ul>
                 <li>
-                    <Link href={"/about"}>About</Link>
+                    <Link href={"./#about"}>ABOUT</Link>
                 </li>
                 <li>
-                    <Link href={"/blog"}>Blog</Link>
+                    <Link href={"./#skills"}>SKILLS</Link>
                 </li>
                 <li>
-                    <Link href={"/contact"}>Contact</Link>
+                    <Link href={"/contact"}>CONTACT</Link>
                 </li>
             </ul>
         </nav>

@@ -33,7 +33,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-html-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-html-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -54,7 +54,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-css-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-css-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -75,7 +75,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-javascript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-javascript-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -96,7 +96,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-typescript-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -128,14 +128,14 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-php-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-php-80.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">CSS3</h3>
+                            <h3 className="skill-desc-title">PHP</h3>
                             <div className="rating">
                             <div className="rate rate4"></div>
                             </div>
@@ -148,14 +148,14 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-python-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-python-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">JavaScript</h3>
+                            <h3 className="skill-desc-title">Python</h3>
                             <div className="rating">
                             <div className="rate rate4"></div>
                             </div>
@@ -165,10 +165,11 @@ const Skills = () => {
                         </div> 
                     </div>
 
+                    {/* C言語 */}
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-c-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -185,10 +186,11 @@ const Skills = () => {
                         </div>
                     </div>
 
+                    {/* Java */}
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-java-coffee-cup-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -222,7 +224,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-php-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-nextjs-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -243,7 +245,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-python-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-angularjs-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -264,7 +266,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-zend-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -297,7 +299,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-php-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-aws-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -318,7 +320,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-python-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-mysql-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -339,7 +341,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-docker-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -360,7 +362,7 @@ const Skills = () => {
                     <div className="card">
                         <div className="skill-icon">
                             <Image
-                                src="/images/icons8-typescript-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                src="/images/icons8-git-96.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
                                 alt="Example Image" // 画像の代替テキスト
                                 width={100} // 必須: 画像の幅
                                 height={100} // 必須: 画像の高さ
@@ -373,6 +375,27 @@ const Skills = () => {
                             </div>
                             <div className="section-text">
                             これはGitの説明文です
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Github */}
+                    <div className="card">
+                        <div className="skill-icon">
+                            <Image
+                                src="/images/icons8-github-100.png" // 画像のパス（パブリックディレクトリの場合は絶対パス）
+                                alt="Example Image" // 画像の代替テキスト
+                                width={100} // 必須: 画像の幅
+                                height={100} // 必須: 画像の高さ
+                            />
+                        </div>
+                        <div className="skill-desc">
+                            <h3 className="skill-desc-title">Github</h3>
+                            <div className="rating">
+                            <div className="rate rate4"></div>
+                            </div>
+                            <div className="section-text">
+                            これはGithubの説明文です
                             </div>
                         </div>
                     </div>

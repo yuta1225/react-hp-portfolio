@@ -21,6 +21,10 @@
       height: 100px;
       .logo h3 {
         font-size: 2rem;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
     }
 
@@ -46,32 +50,31 @@
     main {
       section {
         padding: 100px 0;
-        .section-title {
-          text-align: center;
+        .inner {
+          max-width: 800px;
+          margin: 0 auto;
+          .section-title {
+            text-align: center;
+            font-size: 40px;
+          }
         }
       }
 
       #about {
         .inner {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-      }
-
-      #skills {
-        .inner {
-          max-width: 800px;
-          margin: 0 auto;
+          p{
+            line-height: 2.0;
+          }
         }
       }
 
       #contact {
         .inner {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 0 40px;
           .section-title-area {
             text-align: center;
+            h2 {
+              margin-bottom: 40px;
+            }
             .btn {
               margin: 0 auto;
               text-align: center;
