@@ -2,8 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
-
+        <footer id="footer">
+            <div className="inner">
+                <div className="copyright">
+                &copy;YUTA HANDA. All Rights Reserved.
+                </div>
+            </div>
         </footer>
     );
 }
