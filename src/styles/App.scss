@@ -9,9 +9,6 @@
   font-size: 18px;
   
   header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: grey;
     color: white;
     /* position: fixed; */
@@ -19,11 +16,16 @@
     z-index: 10;
     height: 100px;
     position: fixed;
-    .logo h3 {
-      font-size: 2rem;
-      a{
-        text-decoration: none;
-        color: white;
+    .wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      .logo h3 {
+        font-size: 2rem;
+        a{
+          text-decoration: none;
+          color: white;
+        }
       }
     }
   }
