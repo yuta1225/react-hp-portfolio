@@ -3,10 +3,8 @@ import Main from "../components/Main";
 
 const Home = () => {
   return (
-    <div className="App">
-      <div id='wrapper' className='wrapper'>
-        <Main />
-      </div>
+    <div className='inner'>
+      <Main />
     </div>
   );
 };

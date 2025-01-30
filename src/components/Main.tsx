@@ -5,7 +5,7 @@ import Contact from "./top/Contact";
 
 const Main = () => {
     return (
-        <main>
+        <>
             <div id="mainVisual">
                 <div className="pc">
                     <img src="" alt="" />
@@ -17,7 +17,7 @@ const Main = () => {
             <About />
             <Skills />
             <Contact />
-        </main>
+        </>
     );
 }
 

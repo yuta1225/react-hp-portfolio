@@ -16,10 +16,13 @@
     z-index: 10;
     height: 100px;
     position: fixed;
-    .wrapper {
+    .inner {
+      max-width: 1024px;
+      width: 80%;
       align-items: center;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;  
+      margin: 0 auto;
       .logo h3 {
         font-size: 2rem;
         a{
@@ -27,29 +30,29 @@
           color: white;
         }
       }
-    }
-  }
-
-  nav {
-    ul {
-      li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 30px;
-        font-size: 1.5rem;
-        a {
-          text-decoration: none;
-          color: white;
-          transition: all 0.2s;
+      nav {
+        ul {
+          li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 1.5rem;
+            a {
+              text-decoration: none;
+              color: white;
+              transition: all 0.2s;
+            }
+            a:hover {
+              color: green;
+            }
+          }  
         }
-        a:hover {
-          color: green;
-        }
-      }  
+      }
     }
   }
 
   main {
+    padding-top: 100px;
     section {
       padding: 100px 0 0;
       .inner {
@@ -59,6 +62,9 @@
         .section-title {
           text-align: center;
           font-size: 40px;
+        }
+        .section-skill {
+          font-size: 30px;
         }
       }
     }
@@ -118,6 +124,79 @@
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  #contact-form {
+    padding-bottom: 100px;
+    .contact-image {
+      padding-bottom: 100px;
+      .section-intro {
+        text-align: center;
+      }
+    }
+    .contact-area {
+      .dl-table {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        dt {
+          width: 25%;
+          padding-right: 40px;
+          padding-top: 26px;
+        }
+        .mandatory::after {
+          display: flex;
+          float: right;
+          content: "必須";
+          color: #ff4040;
+          border: 1px solid #f88a8a;
+          background-color: #f4d4d4;
+          padding: 0 4px;
+        }
+        .any::after {
+          display: flex;
+          float: right;
+          content: "任意";
+          color: #333;
+          border: 1px solid #555;
+          background-color: #ddd;
+          padding: 0 4px;
+        }
+        dd {
+          width: 100%;
+          margin-left: 0px;
+          input, textarea {
+            border-radius: 3px;
+            border: 2px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+            width: 100%;
+            resize: none;
+            background-color: #f7f7f7;
+          }
+        }
+      }
+      .dummy {
+        height: 30px;
+      }
+      .btn {
+        margin: 0 auto;
+        text-align: center;
+        a {
+          color: #fff;
+          font-size: 14px;
+          font-weight: bold;
+          background: transparent;
+          padding: 16px 25px;
+          border: 3px solid #444;
+          background-color: #444;
+          position: relative;
+          z-index: 1;
+          transition: .3s;
+          text-decoration: none;
         }
       }
     }
