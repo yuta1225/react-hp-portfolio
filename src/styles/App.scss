@@ -153,20 +153,23 @@
         display: flex;
         flex-wrap: wrap;
         dt {
-          width: 25%;
+          width: 30%;
           padding-right: 40px;
           padding-top: 26px;
         }
         .mandatory::after {
+          font-size: 14px;
           display: flex;
           float: right;
           content: "必須";
           color: #ff4040;
           border: 1px solid #f88a8a;
           background-color: #f4d4d4;
+          margin-top: 2px;
           padding: 0 4px;
         }
         .any::after {
+          font-size: 14px;
           display: flex;
           float: right;
           content: "任意";
@@ -174,6 +177,7 @@
           border: 1px solid #555;
           background-color: #ddd;
           padding: 0 4px;
+          margin-top: 2px;
         }
         dd {
           width: 100%;
@@ -248,7 +252,7 @@
           width: 60px;
           justify-content: center;
           align-items: center;
-          z-index: 90;
+          z-index: 200;
           background-color: black;
           .hamburger-button {
             display: flex;
@@ -281,17 +285,59 @@
               transform: translateY(6px);
             }
           }
+          /* メニュー開閉時のアニメーション */
+          .open .btn-line:nth-child(1) {
+            transform: translateY(3px) rotate(45deg);
+          }
+          .open .btn-line:nth-child(2) {
+            opacity: 0; /* 真ん中の線を消す */
+          }
+          .open .btn-line:nth-child(3) {
+            transform: translateY(-3px) rotate(-45deg);
+          }
         }
-        /* メニュー開閉時のアニメーション */
-        .hamburger-button.open .btn-line:nth-child(1) {
-          transform: translateY(6px) rotate(45deg);
-        }
-        .hamburger-button.open .btn-line:nth-child(2) {
-          opacity: 0; /* 真ん中の線を消す */
-        }
-        .hamburger-menu.button .btn-line:nth-child(3) {
-          transform: translateY(-6px) rotate(-45deg);
-        }
+        
+        .menu-content {
+          width: 100vw;
+          height: 100vh;
+          top: 0;
+          right: 0;
+          left: 0; /* 変更: 右から表示されるように */
+          z-index: 90;
+          background-color: rgba(0, 0, 0, 0.9);  /* 背景を半透明の黒に */
+          transition: all .5s;
+          position: fixed;
+          justify-content: left;
+          opacity: 0;  /* 初期状態では透明 */
+          visibility: hidden;
+          
+          /* メニューが開いたとき */
+          &.open {
+            opacity: 1;
+            visibility: visible; /* メニューが開いたときに表示 */
+            right: 0;  /* メニューがスライドイン */
+          }
+
+          /* 初期状態では非表示 */
+          ul {
+            padding: 70px 15px 0;
+            li {
+              border-bottom: solid 1px #fff;
+              width: 100%;
+              a.list-item {
+                font-size: 16px;
+                list-style: none;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                color: #fff;
+                text-decoration: none;
+                padding: 9px 15px 10px ;
+                position: relative;
+              }
+            }
+          }
+        } 
       }
     }
 
@@ -327,7 +373,7 @@
             display: flex;
             flex-wrap: wrap;
             dt {
-              width: 75%;
+              width: 50%;
               padding-right: 40px;
               padding-top: 26px;
             }

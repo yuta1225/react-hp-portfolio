@@ -35,7 +35,8 @@ const Header = () => {
         {/* SP用ヘッダー */}
         <div className='sp'>
             <div className='hamburger-menu'>
-                <button className='hamburger-button'
+                <button 
+                    className={`hamburger-button ${isOpen ? 'open' : ''}`}
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <span className='btn-line'></span>
@@ -45,17 +46,35 @@ const Header = () => {
             </div>
             
         {isOpen && (
-            <div className='menu-content'>
+            <div className='menu-content open'>
                 <nav>
                     <ul>
                         <li>
-                            <Link href={"./#about"} lang='en'>ABOUT</Link>
+                            <Link 
+                                href={"./#about"} 
+                                className='list-item'
+                                onClick={() => setIsOpen(!isOpen)}
+                            >
+                                ABOUT
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"./#skills"} lang='en'>SKILLS</Link>
+                            <Link 
+                                href={"./#skills"} 
+                                className='list-item'
+                                onClick={() => setIsOpen(!isOpen)}
+                            >
+                                SKILLS
+                            </Link>
                         </li>
                         <li>
-                            <Link href={"/contact"} lang='en'>CONTACT</Link>
+                            <Link 
+                                href={"/contact"} 
+                                className='list-item'
+                                onClick={() => setIsOpen(!isOpen)}
+                                >
+                                    CONTACT
+                                </Link>
                         </li>
                     </ul>
                 </nav>
