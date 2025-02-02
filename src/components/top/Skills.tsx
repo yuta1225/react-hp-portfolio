@@ -6,7 +6,7 @@ const Skills = () => {
         <section id="skills">
             <div className="inner">
                 <div className="section-title-area">
-                    <h2 className="section-title">SKILL</h2>
+                    <h2 className="section-title">SKILLS</h2>
                     <div className="section-intro">
                     クラウド関連を中心に幅広く技術習得に励んでおります。
                     <br />
