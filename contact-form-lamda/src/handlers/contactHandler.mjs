@@ -27,3 +27,16 @@ export async function handler(event) {
         }       
     }
 }
+// ローカルテスト用の event データ
+const testEvents = {
+    body: JSON.stringify({
+        name: 'テストユーザー',
+        email: 'test@example.com',
+        message: 'これはテストメッセージです', 
+    }),
+};
+// ローカル実行
+(async() => {
+    const response = await handler(testEvents);
+    console.log(response);
+})();
