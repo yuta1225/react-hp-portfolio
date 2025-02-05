@@ -34,15 +34,19 @@ const Header = () => {
 
         {/* SP用ヘッダー */}
         <div className='sp'>
-            <div className='hamburger-menu'>
-                <button 
-                    className={`hamburger-button ${isOpen ? 'open' : ''}`}
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    <span className='btn-line'></span>
-                    <span className='btn-line'></span>
-                    <span className='btn-line'></span>
-                </button>
+            <div 
+                className='hamburger-responsive'
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <div className='hamburger-menu'>
+                    <button
+                        className={`hamburger-button ${isOpen ? 'open' : ''}`}
+                    >
+                        <span className='btn-line'></span>
+                        <span className='btn-line'></span>
+                        <span className='btn-line'></span>
+                    </button>
+                </div>
             </div>
             
         {isOpen && (
