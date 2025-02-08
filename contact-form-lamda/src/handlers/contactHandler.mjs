@@ -1,7 +1,6 @@
-import AWS from 'aws-sdk';
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 
-AWS.config.update( { region: 'ap-northeast-1' } );
-const ses = new AWS.SES();
+const sesClient = new SESClient({ region: 'ap-northeast-1' })
 
 export async function handler(event) {
     try {
@@ -13,9 +12,12 @@ export async function handler(event) {
                 Body: { Text: { Data: `From: ${name} (${email}\n\n${message})`}},
                 Subject: { Data: 'お問合せフォーム' },
             },
-            Source: 'noreply@example.com',
+            Source: 'info@yuta-handa.com',
         };
-        await ses.sendEmail(params).promise();
+        
+        const command = new SendEmailCommand(params);
+        await sesClient.send(command);
+        
         return {
             statusCode: 200,
             body: JSON.stringify({ message: 'メール送信成功' }),
