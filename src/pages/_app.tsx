@@ -1,3 +1,4 @@
+import React from "react";
 // グローバルCSSのインポート
 import '../styles/index.scss';
 import '../styles/App.scss';

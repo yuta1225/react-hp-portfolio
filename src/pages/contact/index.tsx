@@ -1,4 +1,5 @@
 // pages/contact.js
+import React from "react";
 import dynamic from "next/dynamic";
 
 // 動的に読み込むコンポーネント
