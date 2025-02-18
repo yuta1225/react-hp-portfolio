@@ -17,13 +17,18 @@ export default function ContactContent() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  if (!process.env.NEXT_PUBLIC_API_GATEWAY_URL) {
+    throw new Error("環境変数 NEXT_PUBLIC_API_GATEWAY_URL が設定されていません");
+  }  
+  const API_URL: string = process.env.NEXT_PUBLIC_API_GATEWAY_URL;
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setMessage("");
 
     try {
-      const response = await fetch("https://your-api-gateway-url/contact", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -128,6 +133,7 @@ export default function ContactContent() {
                 <div className="g-recaptcha"></div>
               </div>
             </div>
+
           </div>
         </div>
       </section>

@@ -8,6 +8,7 @@
 .pnp.js
 /.composer
 /.next
+/.env
 
 # testing
 /coverage
