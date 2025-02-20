@@ -42,10 +42,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">HTML5</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            HTMLの独学をきっかけにオープン系開発に興味を持ちました。
+                            高校生の時にプログラムに興味を持ったきっかけの言語です。
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ const Skills = () => {
                             <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            CSSの独学をきっかけにオープン系開発に興味を持ちました。
+                                インターン時代はscss記法を用いた実装。個人開発ではtailwindを用いた開発を行なっています。サイト制作の案件で相当鍛えられました。
                             </div>
                         </div>
                     </div>
@@ -84,10 +84,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">JavaScript</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            JavaScriptの独学をきっかけにオープン系開発に興味を持ちました。
+                                インターン時代から合算すると3年ほど実務で経験しています。現在勤務している会社ではjQuryベースの開発を行なっております。AjaxやAPIの実装も経験済み。
                             </div>
                         </div> 
                     </div>
@@ -105,10 +105,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">TypeScript</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                            <div className="rate rate3"></div>
                             </div>
                             <div className="section-text">
-                            JavaScriptの独学をきっかけにオープン系開発に興味を持ちました。
+                                インターン時代の開発・個人開発で主に使用していました。一般的な概念は一通り学習済みで、型を利用した堅牢な実装を心がけています。
                             </div>
                         </div>
                     </div>
@@ -137,10 +137,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">PHP</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            現在の会社ではPHPによる開発がメインです
+                                現在の会社ではPHPによる開発がメインです。基本設計から実装まで一通りこなした経験がございます。
                             </div>
                         </div>
                     </div>
@@ -157,10 +157,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Python</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate3"></div>
                             </div>
                             <div className="section-text">
-                            ChatGPTを使用したAI関連の開発は全てPythonを使用して行なっていました
+                                実務でChatGPTを使用したAI関連の開発は全てPythonを使用して行なっていました。
                             </div>
                         </div> 
                     </div>
@@ -178,10 +178,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">C</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate2"></div>
                             </div>
                             <div className="section-text">
-                            これはCです
+                                本格的なプログラミング学習とCS基礎は大学のC言語の講義から始まりました。
                             </div>
                         </div>
                     </div>
@@ -199,10 +199,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Java</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate2"></div>
                             </div>
                             <div className="section-text">
-                            これはJavaです
+                                オブジェクト指向の実践的な考え方はJavaで学びました。
                             </div>
                         </div>
                     </div>
@@ -233,10 +233,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">NextJS</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate3"></div>
                             </div>
                             <div className="section-text">
-                            これはNextJSの説明文です
+                                個人開発のフロントエンドはルーティングが便利なNextJSを使用しています。このサイトもNextJS構成で作成。
                             </div>
                         </div>
                     </div>
@@ -252,12 +252,12 @@ const Skills = () => {
                             />
                         </div>
                         <div className="skill-desc">
-                            <h3 className="skill-desc-title">AngularJS</h3>
+                            <h3 className="skill-desc-title">Angular</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate2"></div>
                             </div>
                             <div className="section-text">
-                            これはAngularJSの説明文です
+                                インターン時代はAngularを利用して開発していました。コンポーネント指向をこの時に知り、あまりの便利さにフレームワークに興味を持ち始めました。
                             </div>
                         </div> 
                     </div>
@@ -275,10 +275,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Zend Framework</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはZend Frameworkの説明文です
+                                実務で使用しているMVCフレームワークです。MVCの考え方に基づいた本格的なバックエンドの実装はZendで鍛えられました。
                             </div>
                         </div>
                     </div>
@@ -308,10 +308,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">AWS</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate3"></div>
                             </div>
                             <div className="section-text">
-                            これはAWSの説明文です
+                                小規模なインフラ構成の設計からデプロイまで一気通貫してできます。HPリリース・セキュリティ対策・保守監視などを現在は担当しています。
                             </div>
                         </div>
                     </div>
@@ -329,10 +329,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">MySQL</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate3"></div>
                             </div>
                             <div className="section-text">
-                            これはMySQLの説明文です
+                                実務では、調査や顧客要望対応のためにSQLを頻繁に使用しています。実際の開発ではテーブル設計から着手しています。
                             </div>
                         </div> 
                     </div>
@@ -350,10 +350,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Docker</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate2"></div>
                             </div>
                             <div className="section-text">
-                            これはDockerの説明文です
+                                個人開発レベルですが、開発環境の統一から本番環境のデプロイまでDockerを活用したことがあります。また、実務でもDockerを使用して開発しています。
                             </div>
                         </div>
                     </div>
@@ -371,10 +371,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Git</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはGitの説明文です
+                                バージョン管理では3年以上Gitを使用し続けています。
                             </div>
                         </div>
                     </div>
@@ -392,10 +392,10 @@ const Skills = () => {
                         <div className="skill-desc">
                             <h3 className="skill-desc-title">Github</h3>
                             <div className="rating">
-                            <div className="rate rate4"></div>
+                                <div className="rate rate4"></div>
                             </div>
                             <div className="section-text">
-                            これはGithubの説明文です
+                                一般的なGithubの使い方は一通り経験済みです。
                             </div>
                         </div>
                     </div>
