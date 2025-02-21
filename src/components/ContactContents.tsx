@@ -39,9 +39,10 @@ export default function ContactContent() {
       if (response.ok) {
         setMessage("お問い合わせを送信しました。");
       } else {
-        setMessage(`送信に失敗しました: ${data.error}`);
+        setMessage(`送信に失敗しました: ${data.error || "不明なエラー"}`);
       }
     } catch (error) {
+      console.log("リクエストエラー:", error)
       setMessage("エラーが発生しました。もう一度お試しください。");
     } finally {
       setIsSubmitting(false);

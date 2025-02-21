@@ -81,6 +81,20 @@
 
     #about {
       .inner {
+        .profile {
+          display: flex;
+          .prBox {
+            text-align: center;
+            margin: 30px 60px 18px 0;
+            img {
+              border-radius:50%;
+              background: linear-gradient(to right bottom, #c71585, #ffc0cb);
+            }
+            div {
+              margin-top: 18px;
+            }
+          }
+        }
         p{
           line-height: 2.0;
         }
