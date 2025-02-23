@@ -8,11 +8,11 @@ const Skills = () => {
                 <div className="section-title-area">
                     <h2 className="section-title">SKILLS</h2>
                     <div className="section-intro">
-                    クラウド関連を中心に幅広く技術習得に励んでおります。
+                    クラウドインフラ・フロントエンド・バックエンドなど領域関係なく日々学習に励んでおります。
                     <br />
-                    これからも日々研鑽していきます！以下チャートは各スキルごとの得意度をレートで示しています。
-                    <div>
-                        <canvas id="myChart"></canvas>
+                    以下のスキル一覧は私が取り組んできたスキルの習熟度を表現したものになります。
+                    <br />
+                    <div className="skill-desc">
                     </div>        
                     </div>
                 </div>

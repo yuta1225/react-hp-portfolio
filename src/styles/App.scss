@@ -102,6 +102,9 @@
     }
 
     #skills {
+      .section-title-area {
+        text-align: center;
+      }
       .card-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -191,6 +194,9 @@
               text-decoration: none;
             }
           }
+          .github-link {
+            margin-top: 50px;
+          }
         }
       }
     }
@@ -256,7 +262,7 @@
       .btn {
         margin: 0 auto;
         text-align: center;
-        a {
+        button {
           color: #fff;
           font-size: 14px;
           font-weight: bold;
@@ -399,7 +405,7 @@
     }
 
     main {
-      padding-top: 100px;
+      padding-top: 0px;
       section {
         padding: 100px 0 0;
         .inner {
@@ -412,6 +418,30 @@
           }
           .section-skill {
             font-size: 18px;
+          }
+        }
+      }
+
+      #mainVisual {
+        display: none;
+      }
+
+      #about {
+        .inner {
+          .profile {
+            display: flex;
+            flex-direction: column;
+            .prBox {
+              text-align: center;
+              margin: 15px;
+              img {
+                border-radius:50%;
+                background: linear-gradient(to right bottom, #c71585, #ffc0cb);
+              }
+              div {
+                margin-top: 18px;
+              }
+            }
           }
         }
       }
