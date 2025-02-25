@@ -246,6 +246,7 @@
           width: 100%;
           margin-left: 0px;
           input, textarea {
+            font-size: 16px;
             border-radius: 3px;
             border: 2px solid #ddd;
             padding: 10px;
@@ -253,6 +254,12 @@
             width: 100%;
             resize: none;
             background-color: #f7f7f7;
+          }
+          input::placeholder {
+            font-size: 16px;
+          }
+          textarea::placeholder {
+            font-size: 16px;
           }
         }
       }
@@ -474,6 +481,7 @@
               width: 100%;
               margin-left: 0px;
               input, textarea {
+                font-size: 12px;
                 border-radius: 3px;
                 border: 2px solid #ddd;
                 padding: 10px;
@@ -481,6 +489,12 @@
                 width: 100%;
                 resize: none;
                 background-color: #f7f7f7;
+              }
+              input::placeholder {
+                font-size: 12px;
+              }
+              textarea::placeholder {
+                font-size: 12px;
               }
             }
           }
