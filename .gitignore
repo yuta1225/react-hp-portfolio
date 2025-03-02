@@ -3,7 +3,9 @@
 # dependencies
 /node_modules
 /out
-/public
+/public/*
+!/public/js/
+!/public/js/*
 /.pnp
 .pnp.js
 /.composer
