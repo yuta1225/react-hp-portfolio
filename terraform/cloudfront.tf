@@ -88,4 +88,8 @@ resource "aws_cloudfront_distribution" "redirect_distribution" {
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }
+
+  tags = {
+    "key" = "redirect_distribution"
+  }
 }
