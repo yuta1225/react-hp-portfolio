@@ -128,6 +128,7 @@ jobs:
         working-directory: ./terraform
 
       - name: Apply Terraform
-        run: terraform apply -auto-approve -input=false
-             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}
+        run: |
+             terraform apply -auto-approve -input=false  
+             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}"
         working-directory: ./terraform
