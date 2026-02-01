@@ -1,0 +1,133 @@
+name: Terraform CI/CD
+run-name: ${{ github.actor }} is running Terraform workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+  push:
+      branches:
+        - main
+      paths:
+        - 'terraform/**'
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  terraform-plan:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.4
+          terraform_wrapper: true
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-northeast-1
+
+      - name: Check format
+        id: format_check
+        run: terraform fmt -check -recursive
+        working-directory: ./terraform
+        continue-on-error: true
+
+      - name: Initialize Terraform
+        id: terraform_init
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Validate configuration
+        id: validation
+        run: terraform validate -no-color
+        working-directory: ./terraform
+
+      - name: Generate plan
+        id: terraform_plan
+        run: terraform plan -no-color -input=false -out=tfplan
+             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}"
+        working-directory: ./terraform
+        continue-on-error: true
+
+      - name: Post results to PR
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        env:
+          FORMAT_RESULT: ${{ steps.format_check.outcome }}
+          INIT_RESULT: ${{ steps.terraform_init.outcome }}
+          VALIDATE_RESULT: ${{ steps.validation.outcome }}
+          VALIDATE_OUTPUT: ${{ steps.validation.outputs.stdout }}
+          PLAN_RESULT: ${{ steps.terraform_plan.outcome }}
+          PLAN_OUTPUT: ${{ steps.terraform_plan.outputs.stdout }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const formatStatus = process.env.FORMAT_RESULT;
+            const initStatus = process.env.INIT_RESULT;
+            const validateStatus = process.env.VALIDATE_RESULT;
+            const validateOut = process.env.VALIDATE_OUTPUT;
+            const planStatus = process.env.PLAN_RESULT;
+            const planOut = process.env.PLAN_OUTPUT;
+
+            const statusIcon = (status) => status === 'success' ? '✅' : '❌';
+
+            let commentBody = `### Terraform Check Results\n\n`;
+            commentBody += `${statusIcon(formatStatus)} **Format Check**: \`${formatStatus}\`\n`;
+            commentBody += `${statusIcon(initStatus)} **Initialization**: \`${initStatus}\`\n`;
+            commentBody += `${statusIcon(validateStatus)} **Validation**: \`${validateStatus}\`\n`;
+            
+            if (validateOut) {
+              commentBody += `\n<details><summary>Validation Details</summary>\n\n\`\`\`\n${validateOut}\n\`\`\`\n</details>\n`;
+            }
+
+            commentBody += `\n${statusIcon(planStatus)} **Plan**: \`${planStatus}\`\n`;
+            
+            if (planOut) {
+              commentBody += `\n<details><summary>Plan Details</summary>\n\n\`\`\`terraform\n${planOut}\n\`\`\`\n</details>\n`;
+            }
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
+
+  terraform-apply:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.4
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-northeast-1
+
+      - name: Initialize Terraform
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Apply Terraform
+        run: terraform apply -auto-approve -input=false
+             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}
+        working-directory: ./terraform
