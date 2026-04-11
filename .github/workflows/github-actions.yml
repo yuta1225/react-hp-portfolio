@@ -10,8 +10,6 @@ on:
   push:
       branches:
         - main
-      paths:
-        - 'terraform/**'
 
 permissions:
   id-token: write
@@ -128,5 +126,35 @@ jobs:
 
       - name: Apply Terraform
         run: terraform apply -auto-approve -input=false
-
         working-directory: ./terraform
+
+  frontend-deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-northeast-1
+
+      - name: Upload to S3
+        run: aws s3 sync out/ s3://yuta-handa.com-hp --delete
+
+      - name: Invalidate CloudFront cache
+        run: aws cloudfront create-invalidation --distribution-id E39E9J1Q06AQCR --paths "/*"
