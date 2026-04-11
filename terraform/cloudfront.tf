@@ -95,7 +95,7 @@ resource "aws_cloudfront_distribution" "redirect_distribution" {
   }
 
   tags = {
-    "key" = "redirect_distribution"
+    "key"  = "redirect_distribution"
     "test" = "terraform test"
   }
 }
