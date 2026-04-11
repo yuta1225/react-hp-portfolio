@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-md: 801px;
+
+  --color-brand-black: #000000;
+  --color-brand-lightgreen: lightgreen;
+  --color-brand-star-gray: #ddd;
+  --color-brand-star-fill: #515151;
+  --color-brand-badge-mandatory-text: #ff4040;
+  --color-brand-badge-mandatory-border: #f88a8a;
+  --color-brand-badge-mandatory-bg: #f4d4d4;
+  --color-brand-badge-any-text: #333;
+  --color-brand-badge-any-border: #555;
+  --color-brand-badge-any-bg: #ddd;
+  --color-brand-input-bg: #f7f7f7;
+  --color-brand-input-border: #ddd;
+  --color-brand-overlay: rgba(0, 0, 0, 0.9);
+
+  --font-family-ozwald: "Ozwald", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

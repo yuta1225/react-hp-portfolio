@@ -1,7 +1,6 @@
 import React from "react";
 // グローバルCSSのインポート
-import '../styles/index.scss';
-import '../styles/App.scss';
+import '../styles/globals.css';
 import Layout from '../components/Layout'
 import { AppProps } from 'next/app';
 
