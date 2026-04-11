@@ -2,27 +2,15 @@ import React from "react";
 import About from "./top/About";
 import Skills from "./top/Skills";
 import Contact from "./top/Contact";
-import Image from "next/image";
+import Script from "next/script";
 
 const Main = () => {
     return (
         <>
-            <div id="mainVisual">
-                <div 
-                    className="pc index-hero-img-pc"
-                    style={{ position: "relative", width: "100%", aspectRatio: "16/8.2" }}
-                >
-                    <Image
-                        src="images/hero-top.png"
-                        alt="サムネイル"
-                        fill
-                        style={{ objectFit: "cover" }}
-                    />
-                </div>
-                <div className="sp index-hero-img-sp">
-                    <img src="" alt="" />
-                </div>
+            <div id="mainVisual" className="max-md:hidden h-[calc(100vh-100px)] bg-black">
+                <div id="hero-page" className="w-full h-full flex items-center justify-center" />
             </div>
+            <Script src="/js/animation.js" strategy="afterInteractive" />
             <About />
             <Skills />
             <Contact />

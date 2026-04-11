@@ -11,7 +11,7 @@ type LayoutProps = {
 };
 export default function Layout({ children, title, description }: LayoutProps) {
   return (
-    <div id="App">
+    <div id="App" className="w-full min-h-screen text-lg font-['Ozwald',sans-serif]">
       <Script src="js/animation.js" strategy="afterInteractive"></Script>
       <Head>
         <title>{title || "YUTA HANDA｜エンジニアポートフォリオ"}</title>
@@ -21,7 +21,7 @@ export default function Layout({ children, title, description }: LayoutProps) {
       </Head>
       <div id="wrapper">
         <Header />
-        <main>{children}</main>
+        <main className="pt-[100px] max-md:pt-0">{children}</main>
         <Footer />
       </div>
     </div>
