@@ -25,7 +25,7 @@ resource "aws_cloudfront_distribution" "react_hp_distribution" {
   is_ipv6_enabled = true
   aliases         = ["www.${local.domain_name}"]
   price_class     = "PriceClass_200"
-  
+
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD"]
     cached_methods         = ["GET", "HEAD"]
