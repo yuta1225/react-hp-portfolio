@@ -56,9 +56,7 @@ jobs:
 
       - name: Generate plan
         id: terraform_plan
-        run: |
-             terraform plan -no-color -input=false -out=tfplan \
-             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}"
+        run: terraform plan -no-color -input=false -out=tfplan
         working-directory: ./terraform
         continue-on-error: true
 
@@ -129,7 +127,6 @@ jobs:
         working-directory: ./terraform
 
       - name: Apply Terraform
-        run: |
-             terraform apply -auto-approve -input=false \
-             -var="aws_account_id=${{ secrets.AWS_ACCOUNT_ID }}"
+        run: terraform apply -auto-approve -input=false
+
         working-directory: ./terraform
